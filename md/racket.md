@@ -115,6 +115,6 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 `undefined` 常量被打印为`#<undefined>` ，当值不可以获得时，即为`undefined` 。
 
-## 参考资料
+# 参考资料
 
 1. https://docs.racket-lang.org/guide/datatypes.html
