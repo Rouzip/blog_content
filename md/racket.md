@@ -114,3 +114,7 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 一些过程和表达式不需要结果的值，那么就可以使用`void` ，其被打印为`#<void>` 。
 
 `undefined` 常量被打印为`#<undefined>` ，当值不可以获得时，即为`undefined` 。
+
+## 参考资料
+
+1. https://docs.racket-lang.org/guide/datatypes.html
