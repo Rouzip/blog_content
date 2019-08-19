@@ -12,6 +12,8 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 > 基于Linux的终端操作，必要的bash操作可以更加提升工作效率，此文记录如何使用bash进行复杂操作。
 
+<!--more-->
+
 # 顺序执行
 
 ```bash
