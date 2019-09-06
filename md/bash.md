@@ -14,41 +14,45 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 <!--more-->
 
-# 顺序执行
+## 顺序执行
 
 ```bash
 $ command1; command2; command3; ...
+// ouput
 ```
 
 简单地顺序执行代码
 
-# 逻辑执行
+## 逻辑执行
 
-## 或
+### 或
 
 当前一条命令执行不正确，执行下一条命令
 
 ```bash
 $ command1 || command2
+// output
 ```
 
-## 与
+### 与
 
 当前一条命令执行正确，执行下一条命令
 
 ```bash
 $ command1 && command2
+// output
 ```
 
-# 通道
+## 通道
 
 将前一条命令产生的结果传送到下一条命令之中
 
 ```bash
 $ command1 | command2
+// output
 ```
 
-# 重定向
+## 重定向
 
 一般将标准输出流重定向到某文件或者某设备
 
@@ -65,4 +69,3 @@ $ cat < file    # 只将文件内容输出
 $ command1 2> file    # 将错误信息重定向到文件中
 $ command1 > file 2>&1    # 将错误信息重定向到文件中，同时将标准错误流重定向到同一文件
 ```
-
