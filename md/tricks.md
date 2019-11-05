@@ -19,4 +19,3 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 ### Golang
 
 在安装完推荐的所有插件之后，就会默认开启保存格式化插件，未使用的包会自动删除代码。这时候，将 Preference 中的 Go: Format Tool 从默认的 goreturns 修改为 gofmt 就可以了。
-

@@ -14,7 +14,7 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 ## Docker 创造背景
 
-Docker 的理论基础容器(container)，早在它开发出之前就被人提出了。面对着越加复杂的开发与部署环境，开发人员通常会花费很长的时间来进行环境的搭建，更有甚者花费一天的时间只为了打出一句`hello world` 。所以为了更好地将数据进行分发和解决依赖问题，进而在各个机器上直接运行。基于 Linux 上的`namespace` 和 `cgroup` 作为基础，Docker 的原型被开发出来，其中`namespace` 就可以做到`container` 的作用，而`cgroup` 则是控制系统的资源。
+Docker 的理论基础容器(container)，早在它开发出之前就被人提出了。面对着越加复杂的开发与部署环境，开发人员通常会花费半天到一天的时间来进行环境的搭建，更有甚者花费一天的时间只为了打出一句`hello world` 。所以为了更好地将数据进行分发和解决依赖问题，然后在各个机器上直接运行。基于 Linux 上的`namespace` 和 `cgroup` 作为基础，Docker 的原型被开发出来，其中`namespace` 就可以做到`container` 的作用，而`cgroup` 是作为控制系统的资源的。
 
 ## 理论基础
 
