@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2019-10-01T22:02:58+08:00
+lastmod: 2019-11-11T22:35:18+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -19,3 +19,11 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 ### Golang
 
 在安装完推荐的所有插件之后，就会默认开启保存格式化插件，未使用的包会自动删除代码。这时候，将 Preference 中的 Go: Format Tool 从默认的 goreturns 修改为 gofmt 就可以了。
+
+## mysql
+
+安装完 mysql 需要更改编码为 utf-8
+
+```sql
+ ALTER DATABASE sp CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+```
