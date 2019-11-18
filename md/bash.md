@@ -10,7 +10,7 @@ author: "Rouzip"
 contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a>'
 ---
 
-> 基于Linux的终端操作，必要的bash操作可以更加提升工作效率，此文记录如何使用bash进行复杂操作。
+> 基于 Linux 的终端操作，必要的 bash 操作可以更加提升工作效率，此文记录如何使用 bash 进行复杂操作。
 
 <!--more-->
 

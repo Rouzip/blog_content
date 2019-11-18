@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2019-11-11T22:35:18+08:00
+lastmod: 2019-11-14T16:23:12+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -26,4 +26,14 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 ```sql
  ALTER DATABASE sp CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+```
+
+## Linux
+
+### 时间同步
+
+通过向 Google 服务器请求当前时间并裁剪出需要的形式，并根据结果进行时间的设定。
+
+```bash
+    date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 ```
