@@ -37,3 +37,18 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 ```bash
     date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 ```
+
+## git
+
+git 较为直观地输出 log
+
+```bash
+    git log --graph --pretty=oneline --abbrev-commit
+```
+
+### 代理
+
+```bash
+    git config --global http.proxy socks5://127.0.0.1:1080  # 这里需要根据自己本地开放端口的不同进行设置
+    git config --global --unset http.proxy
+```
