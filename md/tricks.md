@@ -40,6 +40,8 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 ## git
 
+### 格式化输出
+
 git 较为直观地输出 log
 
 ```bash
