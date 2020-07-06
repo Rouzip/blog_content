@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2019-11-14T16:23:12+08:00
+lastmod: 2020-07-06T11:41:53+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
