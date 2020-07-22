@@ -38,6 +38,20 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
     date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 ```
 
+### 查看进程相关
+
+#### 查看占用某端口的进程
+
+```bash
+lsof -i:<port>
+```
+
+#### 查看某进程打开的句柄
+
+```bash
+lsof -np <pid>
+```
+
 ## git
 
 ### 格式化输出
