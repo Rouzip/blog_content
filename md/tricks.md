@@ -68,3 +68,10 @@ git 较为直观地输出 log
     git config --global http.proxy socks5://127.0.0.1:1080  # 这里需要根据自己本地开放端口的不同进行设置
     git config --global --unset http.proxy
 ```
+
+## vim
+
+跳转到最后一行
+shift+g
+跳转到最后一个字符
+shift+4
