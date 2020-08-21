@@ -69,6 +69,20 @@ git 较为直观地输出 log
     git config --global --unset http.proxy
 ```
 
+### 删除分支
+
+极其**危险**！！！
+
+```bash
+    git branch -d xxx
+```
+
+### 回滚单个文件
+
+```bash
+    git checkout xxxhash xxxFile
+```
+
 ## vim
 
 跳转到最后一行
