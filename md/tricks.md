@@ -20,6 +20,8 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 在安装完推荐的所有插件之后，就会默认开启保存格式化插件，未使用的包会自动删除代码。这时候，将 Preference 中的 Go: Format Tool 从默认的 goreturns 修改为 gofmt 就可以了。
 
+在声明 slcie 之后，如果带了 len，就会初始化为默认值，所以如果只是想作为初始值声明，那么需要将 len 放在 cap 的位置，或者直接声明 0， 或者 var
+
 ## mysql
 
 安装完 mysql 需要更改编码为 utf-8
