@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2020-07-06T11:41:53+08:00
+lastmod: 2021-01-10T16:00:02+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -46,6 +46,7 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 ```bash
 lsof -i:<port>
+netstat -tunlp | grep <port>
 ```
 
 #### 查看某进程打开的句柄
