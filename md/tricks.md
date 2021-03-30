@@ -32,6 +32,19 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 json.MarshalIndent(data, "", "    ")
 ```
 
+#### 检查代码单测覆盖率
+
+在写单测时候，可以使用可视化方式来检查新的逻辑是否覆盖
+
+```bash
+# 生成测试覆盖率文件
+go test -coverprofile=coverage.out
+# 命令行展示覆盖率
+go tool cover -func=coverage.out
+# 使用html 来进行展示单元测试覆盖率
+go tool cover -html=coverage.out
+```
+
 ## mysql
 
 安装完 mysql 需要更改编码为 utf-8
