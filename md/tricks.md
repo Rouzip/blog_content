@@ -66,7 +66,7 @@ rand 中有两个 Source，直接创建的 `rand.NewSourc` 是线程不安全的
 通过向 Google 服务器请求当前时间并裁剪出需要的形式，并根据结果进行时间的设定。
 
 ```bash
-    date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 ```
 
 ### 查看进程相关
@@ -91,14 +91,14 @@ lsof -np <pid>
 git 较为直观地输出 log
 
 ```bash
-    git log --graph --pretty=oneline --abbrev-commit
+git log --graph --pretty=oneline --abbrev-commit
 ```
 
 ### 代理
 
 ```bash
-    git config --global http.proxy socks5://127.0.0.1:1080  # 这里需要根据自己本地开放端口的不同进行设置
-    git config --global --unset http.proxy
+git config --global http.proxy socks5://127.0.0.1:1080  # 这里需要根据自己本地开放端口的不同进行设置
+git config --global --unset http.proxy
 ```
 
 ### 删除分支
@@ -106,13 +106,13 @@ git 较为直观地输出 log
 极其**危险**！！！
 
 ```bash
-    git branch -d xxx
+git branch -d xxx
 ```
 
 ### 回滚单个文件
 
 ```bash
-    git checkout xxxhash xxxFile
+git checkout xxxhash xxxFile
 ```
 
 ## vim
