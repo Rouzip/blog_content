@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2021-03-31T15:47:33+08:00
+lastmod: 2021-03-31T15:52:08+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -22,17 +22,19 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 
 在安装完推荐的所有插件之后，就会默认开启保存格式化插件，未使用的包会自动删除代码。这时候，将 Preference 中的 Go: Format Tool 从默认的 goreturns 修改为 gofmt 就可以了。
 
-#### slice 陷阱
+## Go 踩坑记录
+
+### slice 陷阱
 
 在声明 slcie 之后，如果带了 len，就会初始化为默认值，所以如果只是想作为初始值声明，那么需要将 len 放在 cap 的位置，或者直接声明 0， 或者 var
 
-#### 打印优美格式的 json
+### 打印优美格式的 json
 
 ```go
 json.MarshalIndent(data, "", "    ")
 ```
 
-#### 检查代码单测覆盖率
+### 检查代码单测覆盖率
 
 在写单测时候，可以使用可视化方式来检查新的逻辑是否覆盖
 
@@ -45,7 +47,7 @@ go tool cover -func=coverage.out
 go tool cover -html=coverage.out
 ```
 
-#### rand 库使用
+### rand 库使用
 
 rand 中有两个 Source，直接创建的 `rand.NewSourc` 是线程不安全的，如果想使用线程安全的 rand，可以直接使用全局的 rand，因为默认会提供带 mutex 的 Source(`var globalRand = New(&lockedSource{src: NewSource(1).(*rngSource)})`)，这样可以做到线程安全的随机。
 
