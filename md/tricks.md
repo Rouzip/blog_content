@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2021-01-10T16:00:02+08:00
+lastmod: 2021-03-31T15:47:33+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -44,6 +44,10 @@ go tool cover -func=coverage.out
 # 使用html 来进行展示单元测试覆盖率
 go tool cover -html=coverage.out
 ```
+
+#### rand 库使用
+
+rand 中有两个 Source，直接创建的 `rand.NewSourc` 是线程不安全的，如果想使用线程安全的 rand，可以直接使用全局的 rand，因为默认会提供带 mutex 的 Source(`var globalRand = New(&lockedSource{src: NewSource(1).(*rngSource)})`)，这样可以做到线程安全的随机。
 
 ## mysql
 
