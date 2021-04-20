@@ -34,6 +34,10 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 json.MarshalIndent(data, "", "    ")
 ```
 
+### json 编码问题
+
+golang 默认是使用 utf-8 进行编码的，所以如果使用 GBK 编码，json.Marshal 与 UnMarshal 是无法保证双向可转换的，需要自己实现 Marshal 对应的接口，做一层 Wrapper 封装。
+
 ### 检查代码单测覆盖率
 
 在写单测时候，可以使用可视化方式来检查新的逻辑是否覆盖
