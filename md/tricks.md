@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2021-04-29T16:06:25+08:00
+lastmod: 2021-05-20T17:53:58+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -54,6 +54,35 @@ go tool cover -html=coverage.out
 ### rand 库使用
 
 rand 中有两个 Source，直接创建的 `rand.NewSourc` 是线程不安全的，如果想使用线程安全的 rand，可以直接使用全局的 rand，因为默认会提供带 mutex 的 Source(`var globalRand = New(&lockedSource{src: NewSource(1).(*rngSource)})`)，这样可以做到线程安全的随机。
+
+### 值拷贝
+
+go 中的一切赋值本质上都是值拷贝
+
+```go
+type Conf struct {
+    A string
+}
+
+type Service struct {
+    Conf
+}
+
+func change(c *Conf) {
+    c.A = "b"
+}
+
+func main() {
+    conf := Conf{"a"}
+    service := Service{
+        Conf: conf,
+    }
+    change(&conf)
+    fmt.Println(service.Conf.A)  // a
+}
+```
+
+在嵌套的 struct 中的赋值，并不是直接将这个值赋给 Service，而是创建了一个 struct，将值拷贝给它
 
 ## mysql
 
