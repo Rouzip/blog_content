@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2021-05-20T17:53:58+08:00
+lastmod: 2021-06-14T16:02:36+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -117,6 +117,10 @@ netstat -tunlp | grep <port>
 lsof -np <pid>
 ```
 
+### 多行 bash
+
+使用`control+x+e` 可以进入 vim 模式，进行多行编辑
+
 ## git
 
 ### 格式化输出
@@ -165,3 +169,9 @@ vim 直接 copy 是不会拷贝`\t`这样的特殊字符的，都会被转换成
 ### 重试操作
 
 对于服务端状态码进行区分的重试操作，502 和 504 可以在失败后进行重试，500 这样服务端出错的，可以不考虑重试。
+
+## macOS
+
+### 平台不兼容
+
+macOS 原版 `cp` 的时候会把软链接直接复制成真实文件夹，在拷贝的时候会踩坑
