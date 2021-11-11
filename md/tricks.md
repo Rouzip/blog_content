@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2021-06-14T16:02:36+08:00
+lastmod: 2021-11-11T17:29:34+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -120,6 +120,10 @@ lsof -np <pid>
 ### 多行 bash
 
 使用`control+x+e` 可以进入 vim 模式，进行多行编辑
+
+### GNOME 分屏插件
+
+gTile
 
 ## git
 
