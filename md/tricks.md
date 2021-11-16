@@ -117,6 +117,49 @@ netstat -tunlp | grep <port>
 lsof -np <pid>
 ```
 
+### Ubuntu 中文字体显示问题
+
+在 Ubuntu 中，中文个人字体显示不完全，例如“复”字显示只有一半。
+在`/etc/fonts/conf.avail/64-language-selector-prefer.conf` 中可以发现，SC 在 JP 渲染之后，所以将其顺序调整，重启或 log out 登录后生效。
+
+```text
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+    <alias>
+            <family>sans-serif</family>
+            <prefer>
+                    <family>Noto Sans CJK SC</family>
+                    <family>Noto Sans CJK TC</family>
+                    <family>Noto Sans CJK HK</family>
+                    <family>Noto Sans CJK JP</family>
+                    <family>Noto Sans CJK KR</family>
+                    <family>Lohit Devanagari</family>
+            </prefer>
+    </alias>
+    <alias>
+            <family>serif</family>
+            <prefer>
+                    <family>Noto Serif CJK SC</family>
+                    <family>Noto Serif CJK TC</family>
+                    <family>Noto Serif CJK JP</family>
+                    <family>Noto Serif CJK KR</family>
+                    <family>Lohit Devanagari</family>
+            </prefer>
+    </alias>
+    <alias>
+            <family>monospace</family>
+            <prefer>
+                    <family>Noto Sans Mono CJK SC</family>
+                    <family>Noto Sans Mono CJK TC</family>
+                    <family>Noto Sans Mono CJK HK</family>
+                    <family>Noto Sans Mono CJK JP</family>
+                    <family>Noto Sans Mono CJK KR</family>
+            </prefer>
+    </alias>
+</fontconfig>
+```
+
 ### 多行 bash
 
 使用`control+x+e` 可以进入 vim 模式，进行多行编辑
