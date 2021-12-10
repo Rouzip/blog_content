@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2021-11-11T17:29:34+08:00
+lastmod: 2021-12-10T16:35:35+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -83,6 +83,33 @@ func main() {
 ```
 
 在嵌套的 struct 中的赋值，并不是直接将这个值赋给 Service，而是创建了一个 struct，将值拷贝给它
+
+### 多值排序
+
+可以使用 sort 包进行排序
+
+```go
+type Item []int
+type Items []Item
+
+func (i Items) Len() int {
+    return len(i)
+}
+
+func (is Items) Swap(i, j int) {
+    is[i], is[j] = is[j], is[i]
+}
+
+func (is Items) Less(i, j int) bool {
+    if is[i][0] < is[j][0] {
+        return true
+    }
+    if is[i][0] > is[j][0] {
+        return false
+    }
+    return is[i][1] < is[j][1]
+}
+```
 
 ## mysql
 
