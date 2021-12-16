@@ -121,6 +121,19 @@ func (is Items) Less(i, j int) bool {
 
 ## Linux
 
+### apt 添加 socks5 代理
+
+如果有国外的源导致无法下载，可以使用 apt 添加 socks5 代理。
+
+```bash
+sudo vim /etc/apt/apt.conf.d/proxy.conf
+```
+
+```conf
+Acquire::http::Proxy "http://127.0.0.1:1080";
+Acquire::https::Proxy "http://127.0.0.1:1080";
+```
+
 ### 时间同步
 
 通过向 Google 服务器请求当前时间并裁剪出需要的形式，并根据结果进行时间的设定。
