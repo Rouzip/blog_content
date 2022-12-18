@@ -1,7 +1,7 @@
 ---
 title: "本地部署kubernetes"
 date: 2022-11-26T15:47:15+08:00
-draft: true
+draft: false
 lastmod: 2022-12-18T22:32:59+08:00
 tags: ["Kubernetes", "deploy", "vagrant"]
 categories: ["code"]
