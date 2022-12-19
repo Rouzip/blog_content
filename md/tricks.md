@@ -2,7 +2,7 @@
 title: "Tricks"
 date: 2019-10-01T16:38:19+08:00
 draft: false
-lastmod: 2021-12-10T16:35:35+08:00
+lastmod: 2022-12-19T22:16:15+08:00
 tags: ["tricks", "solution"]
 categories: ["code"]
 author: "Rouzip"
@@ -204,6 +204,12 @@ lsof -np <pid>
 
 使用`control+x+e` 可以进入 vim 模式，进行多行编辑
 
+### 使用rsync进行数据同步
+
+```bash
+rsync -az src dst
+```
+
 ### GNOME 分屏插件
 
 gTile
@@ -221,7 +227,7 @@ git log --graph --pretty=oneline --abbrev-commit
 ### 代理
 
 ```bash
-git config --global http.proxy socks5://127.0.0.1:1080  # 这里需要根据自己本地开放端口的不同进行设置
+git config --global http.proxy http://127.0.0.1:1080  # 这里需要根据自己本地开放端口的不同进行设置
 git config --global --unset http.proxy
 ```
 
