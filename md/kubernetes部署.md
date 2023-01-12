@@ -113,6 +113,8 @@ systemctl enable --now containerd
 
 mkdir -p /etc/containerd/
 containerd config default | tee /etc/containerd/config.toml
+sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
+systemctl restart containerd.service
 ```
 
 ##### Deploy runc
